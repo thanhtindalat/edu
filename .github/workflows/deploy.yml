@@ -1,0 +1,21 @@
+name: Deploy to cPanel
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull and deploy on cPanel
+        env:
+          TOKEN: ${{ secrets.CPANEL_TOKEN }}
+          REPO: /home/miniaivn/repositories/edu
+        run: |
+          H="https://vnpttt-amd7f72-h1.vietnix.vn:2083"
+          AUTH="Authorization: cpanel miniaivn:${TOKEN}"
+          curl -sS -H "$AUTH" "$H/execute/VersionControl/update" --data-urlencode "repository_root=$REPO" --data-urlencode "branch=main" | tee up.json
+          grep -q '"status":1' up.json
+          sleep 5
+          curl -sS -H "$AUTH" "$H/execute/VersionControlDeployment/create" --data-urlencode "repository_root=$REPO" | tee dep.json
+          grep -q '"status":1' dep.json

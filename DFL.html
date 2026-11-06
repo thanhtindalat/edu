@@ -644,6 +644,8 @@ h2.h{font-weight:800;font-size:72px;line-height:1.06;letter-spacing:-.02em;}
 .diff .big{font-family:var(--font-serif);font-style:italic;font-weight:700;font-size:96px;color:var(--seal);line-height:1}
 .diff .t{font-size:31px;font-weight:800;margin:26px 0 16px;line-height:1.2}
 .diff .d{font-size:24px;line-height:1.45;color:var(--ink-2)}
+.diff .chs{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.diff .chs span{background:var(--seal);color:#fff;font-weight:700;font-size:20px;padding:7px 16px;border-radius:999px}
 .diff .vs{position:absolute;left:28px;right:28px;bottom:28px;font-size:19px;line-height:1.4;color:var(--ink-3);border-top:1px dashed rgba(11,31,68,.25);padding-top:12px}
 
 /* ===== S8 PROOF ===== */
@@ -915,9 +917,9 @@ h2.h{font-weight:800;font-size:72px;line-height:1.06;letter-spacing:-.02em;}
   <div class="diff-head"><h2 class="h reveal d1">Năm điều <span class="em">làm nên khác biệt.</span></h2></div>
   <div class="diffs">
     <div class="diff reveal d2"><div class="big">0</div><div class="t">Không cần tải thêm ứng dụng</div><div class="d">Đi thẳng vào nơi 81,3 triệu người dùng Zalo đã có mặt mỗi tháng.</div><div class="vs">Ứng dụng riêng phải vận động từng người tải về.</div></div>
-    <div class="diff reveal d3"><div class="big">4</div><div class="t">tầng kênh, có xác nhận</div><div class="d">Zalo → SMS → cuộc gọi → cán bộ. Biết chắc ai đã nhận, ai cần hỗ trợ.</div><div class="vs">Kênh hiện nay chủ yếu là phát tin một chiều.</div></div>
-    <div class="diff reveal d4"><div class="big">1</div><div class="t">nguồn sự thật</div><div class="d">AI chỉ trả lời theo văn bản đơn vị phê duyệt, dẫn nguồn, chuyển cán bộ khi thiếu căn cứ.</div><div class="vs">Không phải chatbot “biết mọi thứ”.</div></div>
-    <div class="diff reveal d5"><div class="big">⏱</div><div class="t">thời hạn cho từng việc</div><div class="d">Mỗi lĩnh vực có hạn xử lý riêng, quá hạn hệ thống tự nhắc người phụ trách.</div><div class="vs">Nhóm Zalo không có hàng đợi, không có hạn.</div></div>
+    <div class="diff reveal d3"><div class="big">5</div><div class="t">Triển khai nhanh</div><div class="d">Dựng trên nền tảng đã phục vụ khoảng 1.000 doanh nghiệp, theo 5 bước: khảo sát → cấu hình → tích hợp dữ liệu → đào tạo → vận hành.</div><div class="vs">Không phải xây mới từ đầu.</div></div>
+    <div class="diff reveal d4"><div class="big">3</div><div class="t">Cán bộ chỉ cần quản lý, để đội chuyên nghiệp lo</div><div class="d">Mini AI đưa thông tin tới người dân qua các kênh:</div><div class="chs"><span>Zalo</span><span>Facebook</span><span>SMS</span></div><div class="vs">Cán bộ không phải tự vận hành từng kênh.</div></div>
+    <div class="diff reveal d5"><div class="big">1</div><div class="t">câu trả lời cho tất cả kênh giao tiếp</div><div class="d">AI trả lời theo văn bản đơn vị phê duyệt, thống nhất trên mọi kênh; chuyển cán bộ khi thiếu căn cứ.</div><div class="vs">Không mỗi kênh trả lời một kiểu.</div></div>
     <div class="diff reveal d6"><div class="big">24/7</div><div class="t">AI hỏi đáp cho người dân</div><div class="d">Trả lời cả ngoài giờ hành chính, đa ngôn ngữ, giảm tải cho cán bộ những câu hỏi lặp lại.</div><div class="vs">AI chạy trên máy chủ riêng, bảo mật cao.</div></div>
   </div>
 </section>
